@@ -24,7 +24,7 @@ public class ButtomsManager : MonoBehaviour {
 
     public void polymercatButton()
     {
-        Debug.Log("undi la carta semisintetico");
+        Debug.Log("undi la carta polimeros");
         polymerscat.SetActive(true);
         syntheticcat.SetActive(false);
         naturalcat.SetActive(false);
@@ -34,7 +34,7 @@ public class ButtomsManager : MonoBehaviour {
     }
     public void syntheticcatButton()
     {
-        Debug.Log("undi la carta semisintetico");
+        Debug.Log("undi la carta categoria sinteticos");
         syntheticcat.SetActive(true);
         polymerscat.SetActive(false);
         naturalcat.SetActive(false);
@@ -44,7 +44,7 @@ public class ButtomsManager : MonoBehaviour {
     }
     public void naturalcatButton()
     {
-        Debug.Log("undi la carta semisintetico");
+        Debug.Log("undi la carta categoria natural");
         naturalcat.SetActive(true);
         polymerscat.SetActive(false);
         syntheticcat.SetActive(false);
@@ -54,7 +54,7 @@ public class ButtomsManager : MonoBehaviour {
     }
     public void semisinthetyccatButton()
     {
-        Debug.Log("undi la carta semisintetico");
+        Debug.Log("undi la carta categoria semisintetico");
         semisinthetyccat.SetActive(true);
         polymerscat.SetActive(false);
         syntheticcat.SetActive(false);
