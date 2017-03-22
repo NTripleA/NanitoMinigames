@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scene/Journal 3.10.17.unity
-  isLoaded: 1
-  isActive: 1
