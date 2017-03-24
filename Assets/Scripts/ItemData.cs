@@ -9,6 +9,8 @@ public class ItemData : MonoBehaviour {
     public Inventory inventory;
     public Sprite obj;
 
+    public GameObject crystals;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -31,12 +33,17 @@ public class ItemData : MonoBehaviour {
     }
     void OnMouseDown()
     {
-        if (!inventory.isUsed()) //so we won't have more than one item being picked
+
+        if (!crystals.activeSelf)
         {
-            this.gameObject.SetActive(false);
-            picked = true;
-            inventory.changeSprite(obj, this);
+            if (!inventory.isUsed()) //so we won't have more than one item being picked
+            {
+                this.gameObject.SetActive(false);
+                picked = true;
+                inventory.changeSprite(obj, this);
+            }
         }
+        
     }
 
 

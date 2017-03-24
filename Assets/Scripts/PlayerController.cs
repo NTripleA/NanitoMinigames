@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour {
     private float sleepTimer;
     private float sleepWaitTime;
 
+    public GameObject crystals;
+
 	// Use this for initialization
 	void Start () {
 
@@ -41,7 +43,14 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (Camera.current.name == "Main Camera")
+        {
+            crystals.SetActive(true);
+        }
+        else
+        {
+            crystals.SetActive(false);
+        }
        /* if (Input.GetMouseButtonDown(0) && camSwitch.getMainCam())
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -74,9 +83,11 @@ public class PlayerController : MonoBehaviour {
 
             if (transform.position.x <= shelfPos.position.x)
             {
+                Debug.Log("AHORA");
                 goShelf = false;
                 camSwitch.setShelfCam();
                 sleepTimer = sleepWaitTime;
+                
             }
         }
         else if (goDesk)
@@ -129,8 +140,13 @@ public class PlayerController : MonoBehaviour {
 
     public void setNoTouch()
     {
+        
         goShelf = false;
         goDesk = false;
         sleepTimer = sleepWaitTime;
+        if(Camera.current.name == "shelfCamera" || Camera.current.name == "DeskCamera")
+        {
+            camSwitch.getMainCam();
+        }
     }
 }

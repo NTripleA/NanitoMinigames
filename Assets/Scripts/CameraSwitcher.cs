@@ -7,10 +7,12 @@ public class CameraSwitcher : MonoBehaviour {
     private bool isMain;
     private bool isDesk;
     private bool isShelf;
+    private bool isJournal;
 
     public GameObject mainCam;
     public GameObject deskCam;
     public GameObject shelfCam;
+    public GameObject journal;
 
 	// Use this for initialization
 	void Start () {
@@ -18,10 +20,12 @@ public class CameraSwitcher : MonoBehaviour {
         isMain  =  true;
         isDesk  = false;
         isShelf = false;
+        isJournal = false;
 
         mainCam.SetActive(true);
         deskCam.SetActive(false);
         deskCam.SetActive(false);
+        journal.SetActive(false);
 	}
 	
 	// Update is called once per frame
