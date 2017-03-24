@@ -37,6 +37,7 @@ public class Inventory : MonoBehaviour {
         it = item;
         GetComponent<Image>().sprite = newsprite;
         button.gameObject.SetActive(true);
+        used = true;
     }
 
     /*
@@ -49,6 +50,7 @@ public class Inventory : MonoBehaviour {
         it.gameObject.SetActive(true);
         button.gameObject.SetActive(false);
         GetComponent<Image>().sprite = oldsprite;
+        used = false;
     }
 
     public bool isUsed()

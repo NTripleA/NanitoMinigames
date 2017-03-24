@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseClick : MonoBehaviour {
 
@@ -18,6 +19,7 @@ public class MouseClick : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        Debug.Log("WORKING");
         if(gameObject.name == "Walls")
         {
             player.SendMessage("setNoTouch");
@@ -30,9 +32,14 @@ public class MouseClick : MonoBehaviour {
         {
             player.SendMessage("setDesk");
         }
-        else if(gameObject.name == "SettingsButton")
+       /* else if(button.name == "SettingsButton")
         {
             player.SendMessage("setSettings");
-        }
+        }*/
+    }
+
+    public void setSettings()
+    {
+        player.SendMessage("setSettings");
     }
 }
