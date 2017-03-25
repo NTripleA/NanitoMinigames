@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Camera.current.name == "Main Camera")
+        if (camSwitch.getMainCam())
         {
             crystals.SetActive(true);
         }
@@ -144,12 +144,17 @@ public class PlayerController : MonoBehaviour {
         goShelf = false;
         goDesk = false;
         sleepTimer = sleepWaitTime;
+
+        if (!camSwitch.getMainCam())
+        {
+            camSwitch.setMainCam();
+        }
         
     }
 
     public void setJournal()
     {
-        if(Camera.current.name == "DeskCamera")
+        if(camSwitch.getDeskCam())
         {
             Debug.Log("llegue");
             camSwitch.setJournalCam();

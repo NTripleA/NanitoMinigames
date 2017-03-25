@@ -22,6 +22,7 @@ public class CameraSwitcher : MonoBehaviour {
         isShelf = false;
         isJournal = false;
 
+
         mainCam.SetActive(true);
         deskCam.SetActive(false);
         deskCam.SetActive(false);
@@ -118,5 +119,10 @@ public class CameraSwitcher : MonoBehaviour {
     public bool getMainCam()
     {
         return isMain;
+    }
+
+    public bool getDeskCam()
+    {
+        return isDesk;
     }
 }

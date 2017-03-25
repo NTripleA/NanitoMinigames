@@ -57,6 +57,23 @@ public class Inventory : MonoBehaviour {
     {
         return used;
     }
+
+    /*
+     * Returns the name of the current object in the inventory slot
+     */
+
+    public String getObjectName()
+    {
+        if(it == null)
+        {
+            return "";
+        }
+        else
+        {
+            return it.gameObject.name;
+        }
+    
+    }
     
     
 }

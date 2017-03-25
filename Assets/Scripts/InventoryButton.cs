@@ -17,7 +17,6 @@ public class InventoryButton : MonoBehaviour {
 
     public void BeenClicked()
     {
-        Debug.Log("AQUIASDA");
         inv.ReturnFromWhenceYouCame();
     }
 }

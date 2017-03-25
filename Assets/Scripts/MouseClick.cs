@@ -34,7 +34,8 @@ public class MouseClick : MonoBehaviour {
         }
         else if(gameObject.name == "Monitor")
         {
-            player.SendMessage("setJournal");
+
+            player.setJournal();
         }
        /* else if(button.name == "SettingsButton")
         {

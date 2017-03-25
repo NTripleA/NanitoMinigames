@@ -6012,8 +6012,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1731273306}
-  - component: {fileID: 1731273308}
   - component: {fileID: 1731273307}
+  - component: {fileID: 1731273308}
   m_Layer: 0
   m_Name: Monitor
   m_TagString: Untagged
@@ -6046,20 +6046,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 942316558}
---- !u!61 &1731273308
-BoxCollider2D:
+--- !u!65 &1731273308
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1731273305}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: -0.023906708, y: 0.065743506}
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.1516085, y: 0.8685131}
+  m_Size: {x: 3.1811972, y: 0.87258697, z: 1}
+  m_Center: {x: -0.026089191, y: 0.06370658, z: 0}
 --- !u!1 &1737691642
 GameObject:
   m_ObjectHideFlags: 0
