@@ -19,7 +19,7 @@ public class MouseClick : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        Debug.Log("WORKING");
+      
         if(gameObject.name == "Walls")
         {
             player.SendMessage("setNoTouch");
@@ -31,6 +31,10 @@ public class MouseClick : MonoBehaviour {
         else if(gameObject.name == "Multiple Monitor PC")
         {
             player.SendMessage("setDesk");
+        }
+        else if(gameObject.name == "Monitor")
+        {
+            player.SendMessage("setJournal");
         }
        /* else if(button.name == "SettingsButton")
         {

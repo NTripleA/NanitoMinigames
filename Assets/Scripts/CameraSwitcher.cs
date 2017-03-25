@@ -55,12 +55,14 @@ public class CameraSwitcher : MonoBehaviour {
             mainCam.SetActive(true);
             deskCam.SetActive(false);
             shelfCam.SetActive(false);
+            journal.SetActive(false);
         }
 
         if (isDesk)
         {
           //  mainCam.SetActive(false);
             deskCam.SetActive(true);
+            journal.SetActive(false);
             shelfCam.SetActive(false);
         }
 
@@ -68,7 +70,16 @@ public class CameraSwitcher : MonoBehaviour {
         {
           //  mainCam.SetActive(false);
             deskCam.SetActive(false);
+            journal.SetActive(false);
             shelfCam.SetActive(true);
+            
+        }
+
+        if (isJournal)
+        {
+            deskCam.SetActive(false);
+            shelfCam.SetActive(false);
+            journal.SetActive(true);
         }
     }
 
@@ -77,6 +88,7 @@ public class CameraSwitcher : MonoBehaviour {
         isDesk  =  true;
         isMain  = false;
         isShelf = false;
+        isJournal = false;
     }
 
     public void setShelfCam()
@@ -84,6 +96,7 @@ public class CameraSwitcher : MonoBehaviour {
         isDesk  = false;
         isMain  = false;
         isShelf =  true;
+        isJournal = false;
     }
 
     public void setMainCam()
@@ -91,6 +104,15 @@ public class CameraSwitcher : MonoBehaviour {
         isDesk  = false;
         isMain  =  true;
         isShelf = false;
+        isJournal = false;
+    }
+
+    public void setJournalCam()
+    {
+        isDesk = false;
+        isMain = false;
+        isShelf = false;
+        isJournal = true;
     }
 
     public bool getMainCam()

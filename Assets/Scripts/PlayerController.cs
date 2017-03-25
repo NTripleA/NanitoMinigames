@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour {
 
             if (transform.position.x <= shelfPos.position.x)
             {
-                Debug.Log("AHORA");
+                
                 goShelf = false;
                 camSwitch.setShelfCam();
                 sleepTimer = sleepWaitTime;
@@ -144,9 +144,15 @@ public class PlayerController : MonoBehaviour {
         goShelf = false;
         goDesk = false;
         sleepTimer = sleepWaitTime;
-        if(Camera.current.name == "shelfCamera" || Camera.current.name == "DeskCamera")
+        
+    }
+
+    public void setJournal()
+    {
+        if(Camera.current.name == "DeskCamera")
         {
-            camSwitch.getMainCam();
+            Debug.Log("llegue");
+            camSwitch.setJournalCam();
         }
     }
 }
