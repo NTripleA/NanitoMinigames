@@ -40,7 +40,6 @@ Microscope.fbx
 *.psd.meta
 *.renderTexture.meta
 *.jpg.meta
-*.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
